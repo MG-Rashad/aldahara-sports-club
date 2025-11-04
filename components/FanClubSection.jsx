@@ -31,7 +31,7 @@ const FanClubSection = ({ isArabic }) => {
           className="mb-12 text-center"
         >
           <h2 className={`text-4xl md:text-5xl font-bold text-black mb-4 ${isArabic ? 'font-arabic' : ''}`}>
-            {isArabic ? 'نادي المشجعين' : 'Fan Club'}
+            {isArabic ? ' المشجعين' : 'Fans'}
           </h2>
           <div className="w-24 h-1 mx-auto bg-red-600"></div>
           <p className={`mt-4 text-lg text-gray-700 max-w-3xl mx-auto ${isArabic ? 'font-arabic' : ''}`}>
@@ -74,7 +74,7 @@ const FanClubSection = ({ isArabic }) => {
           >
             <div className="p-8 text-white bg-black rounded-lg">
               <h3 className={`text-2xl font-bold mb-6 ${isArabic ? 'font-arabic' : ''}`}>
-                {isArabic ? 'انضم إلى نادي المشجعين' : 'Join the Fan Club'}
+                {isArabic ? 'انضم إلى مجتمعنا من المشجعين' : 'Join the Fans'}
               </h3>
               {isSubscribed ? (
                 <motion.div
@@ -133,7 +133,7 @@ const FanClubSection = ({ isArabic }) => {
           className="mt-16"
         >
           <h3 className={`text-2xl font-bold text-black mb-6 text-center ${isArabic ? 'font-arabic' : ''}`}>
-            {isArabic ? ' المشجعين' : 'Fan Gallery'}
+            {isArabic ? ' المشجعين' : 'Fans'}
           </h3>
           
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">

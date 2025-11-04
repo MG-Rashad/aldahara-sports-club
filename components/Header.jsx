@@ -11,7 +11,7 @@ const Header = ({ isArabic, toggleLanguage, isScrolled }) => {
     { id: 'football', label: isArabic ? 'كرة القدم' : 'Football' },
     { id: 'basketball', label: isArabic ? 'كرة السلة' : 'Basketball' },
     { id: 'youth', label: isArabic ? 'الشباب' : 'Youth' },
-    { id: 'fanclub', label: isArabic ? 'نادي المشجعين' : 'Fan Club' },
+    { id: 'fanclub', label: isArabic ? ' المشجعين' : 'Fans' },
     { id: 'contact', label: isArabic ? 'اتصل بنا' : 'Contact Us' },
   ];
 

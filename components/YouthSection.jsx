@@ -7,7 +7,7 @@ const YouthSection = ({ isArabic }) => {
       id: 1,
       title: isArabic ? 'أكاديمية الشباب' : 'Youth Academy',
       description: isArabic ? 'برنامج تدريبي شامل للاعبين تتراوح أعمارهم بين 6-18 سنة' : 'Comprehensive training program for players aged 6-18',
-      image: '/youth-academy.jpg',
+      image: '/youth- academy.jpg',
       age: isArabic ? '6-18 سنة' : '6-18 years'
     },
     {

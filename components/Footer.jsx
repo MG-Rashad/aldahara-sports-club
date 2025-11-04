@@ -18,7 +18,7 @@ const Footer = ({ isArabic }) => {
     {
       title: isArabic ? 'النادي' : 'Club',
       links: [
-        { name: isArabic ? ' المشجعين' : 'Fan Club', href: '#fanclub' },
+        { name: isArabic ? ' المشجعين' : 'Fans', href: '#fanclub' },
         { name: isArabic ? 'اتصل بنا' : 'Contact Us', href: '#contact' },
         { name: isArabic ? 'الوظائف' : 'Careers', href: '#' },
         { name: isArabic ? 'المتجر' : 'Shop', href: '#' },

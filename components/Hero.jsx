@@ -26,7 +26,7 @@ const Hero = ({ isArabic }) => {
           <div className="flex justify-center mb-6">
             <div className="relative w-24 h-24 md:w-32 md:h-32">
               <Image
-                src="/logo.png"
+                src="/logo6.png"
                 alt="Club Logo"
                 layout="fill"
                 objectFit="contain"
