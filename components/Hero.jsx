@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl px-4 mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center psx-4 pex-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute text-white transform -translate-x-1/2 bottom-8 left-1/2"
+        className="absolute text-white transform -translate-x-1/2 bottom-8 inset-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}

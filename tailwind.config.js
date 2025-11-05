@@ -13,6 +13,14 @@ module.exports = {
       fontFamily: {
         'arabic': ['Cairo', 'sans-serif'],
       },
+      // --- CHANGE: Override the default container to use logical padding ---
+      container: {
+        center: true,
+        padding: '1.5rem', // This sets the default padding
+        screens: {
+          sm: '2rem',
+        },
+      },
     },
   },
   plugins: [],
