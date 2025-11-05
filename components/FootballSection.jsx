@@ -11,42 +11,42 @@ const FootballSection = ({ isArabic }) => {
   const [matchDirection, setMatchDirection] = useState(0);
   
   const teamMembers = [
-    { id: 1, name: isArabic ? 'أحمد محمد' : 'Ahmed Mohamed', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 1, image: '/player1.jpg', age: 28, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 2, name: isArabic ? 'علي عبدالله' : 'Ali Abdullah', position: isArabic ? 'مدافع' : 'Defender', number: 4, image: '/player2.jpg', age: 26, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 3, name: isArabic ? 'محمود عمر' : 'Mahmoud Omar', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 8, image: '/player3.jpg', age: 24, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 4, name: isArabic ? 'يوسف إبراهيم' : 'Yousef Ibrahim', position: isArabic ? 'مهاجم' : 'Forward', number: 10, image: '/player4.jpg', age: 25, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 5, name: isArabic ? 'خالد سالم' : 'Khaled Salem', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 12, image: '/player5.jpg', age: 30, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 6, name: isArabic ? 'عمر فتحي' : 'Omar Fathi', position: isArabic ? 'مدافع' : 'Defender', number: 5, image: '/player6.jpg', age: 27, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 7, name: isArabic ? 'ياسر أحمد' : 'Yasser Ahmed', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 6, image: '/player7.jpg', age: 23, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 8, name: isArabic ? 'حسن علي' : 'Hassan Ali', position: isArabic ? 'مهاجم' : 'Forward', number: 9, image: '/player8.jpg', age: 29, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 9, name: isArabic ? 'محمد خليفة' : 'Mohammed Khalifa', position: isArabic ? 'مدافع' : 'Defender', number: 2, image: '/player9.jpg', age: 31, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 10, name: isArabic ? 'إبراهيم يوسف' : 'Ibrahim Yousef', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 7, image: '/player10.jpg', age: 22, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 11, name: isArabic ? 'طارق السيد' : 'Tarek Al-Sayed', position: isArabic ? 'مهاجم' : 'Forward', number: 11, image: '/player11.jpg', age: 26, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 12, name: isArabic ? 'عبدالرحمن علي' : 'Abdelrahman Ali', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 25, image: '/player12.jpg', age: 32, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 13, name: isArabic ? 'مصطفى حسن' : 'Mustafa Hassan', position: isArabic ? 'مدافع' : 'Defender', number: 3, image: '/player13.jpg', age: 28, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 14, name: isArabic ? 'حمزة عادل' : 'Hamza Adel', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 14, image: '/player14.jpg', age: 21, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 15, name: isArabic ? 'أحمد رامي' : 'Ahmed Rami', position: isArabic ? 'مهاجم' : 'Forward', number: 16, image: '/player15.jpg', age: 24, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 16, name: isArabic ? 'خالد محمود' : 'Khaled Mahmoud', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 18, image: '/player16.jpg', age: 25, nationality: isArabic ? 'ليبي' : 'Libyan' },
-    { id: 17, name: isArabic ? 'ياسر خالد' : 'Yasser Khaled', position: isArabic ? 'مدافع' : 'Defender', number: 15, image: '/player17.jpg', age: 27, nationality: isArabic ? 'ليبي' : 'Libyan' },
+    { id: 1, name: isArabic ? 'أحمد محمد' : 'Ahmed Mohamed', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 1, image: '/player1.jpg', age: 28, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 2, name: isArabic ? 'علي عبدالله' : 'Ali Abdullah', position: isArabic ? 'مدافع' : 'Defender', number: 4, image: '/player2.jpg', age: 26, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 3, name: isArabic ? 'محمود عمر' : 'Mahmoud Omar', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 8, image: '/player3.jpg', age: 24, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 4, name: isArabic ? 'يوسف إبراهيم' : 'Yousef Ibrahim', position: isArabic ? 'مهاجم' : 'Forward', number: 10, image: '/player4.jpg', age: 25, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 5, name: isArabic ? 'خالد سالم' : 'Khaled Salem', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 12, image: '/player5.jpg', age: 30, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 6, name: isArabic ? 'عمر فتحي' : 'Omar Fathi', position: isArabic ? 'مدافع' : 'Defender', number: 5, image: '/player6.jpg', age: 27, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 7, name: isArabic ? 'ياسر أحمد' : 'Yasser Ahmed', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 6, image: '/player7.jpg', age: 23, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 8, name: isArabic ? 'حسن علي' : 'Hassan Ali', position: isArabic ? 'مهاجم' : 'Forward', number: 9, image: '/player8.jpg', age: 29, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 9, name: isArabic ? 'محمد خليفة' : 'Mohammed Khalifa', position: isArabic ? 'مدافع' : 'Defender', number: 2, image: '/player9.jpg', age: 31, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 10, name: isArabic ? 'إبراهيم يوسف' : 'Ibrahim Yousef', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 7, image: '/player10.jpg', age: 22, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 11, name: isArabic ? 'طارق السيد' : 'Tarek Al-Sayed', position: isArabic ? 'مهاجم' : 'Forward', number: 11, image: '/player11.jpg', age: 26, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 12, name: isArabic ? 'عبدالرحمن علي' : 'Abdelrahman Ali', position: isArabic ? 'حارس مرمى' : 'Goalkeeper', number: 25, image: '/player12.jpg', age: 32, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 13, name: isArabic ? 'مصطفى حسن' : 'Mustafa Hassan', position: isArabic ? 'مدافع' : 'Defender', number: 3, image: '/player13.jpg', age: 28, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 14, name: isArabic ? 'حمزة عادل' : 'Hamza Adel', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 14, image: '/player14.jpg', age: 21, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 15, name: isArabic ? 'أحمد رامي' : 'Ahmed Rami', position: isArabic ? 'مهاجم' : 'Forward', number: 16, image: '/player15.jpg', age: 24, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 16, name: isArabic ? 'خالد محمود' : 'Khaled Mahmoud', position: isArabic ? 'لاعب وسط' : 'Midfielder', number: 18, image: '/player16.jpg', age: 25, nationality: isArabic ? 'ليبي' : 'Libyan', },
+    { id: 17, name: isArabic ? 'ياسر خالد' : 'Yasser Khaled', position: isArabic ? 'مدافع' : 'Defender', number: 15, image: '/player17.jpg', age: 27, nationality: isArabic ? 'ليبي' : 'Libyan', },
   ];
 
   const upcomingMatches = [
-    { id: 1, opponent: isArabic ? 'الأهلي طرابلس' : 'Al Ahli Tripoli', date: '2023-10-15', time: '19:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium' },
-    { id: 2, opponent: isArabic ? 'التحدي' : 'Al Tahaddi', date: '2023-10-22', time: '16:00', home: false, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب بنغازي' : 'Benghazi Stadium' },
-    { id: 3, opponent: isArabic ? 'النصر بنغازي' : 'Al Nasr Benghazi', date: '2023-10-29', time: '18:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium' },
-    { id: 4, opponent: isArabic ? 'الاتحاد' : 'Al Ittihad', date: '2023-11-05', time: '20:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب طرابلس' : 'Tripoli Stadium' },
-    { id: 5, opponent: isArabic ? 'الشط' : 'Al Shat', date: '2023-11-12', time: '17:00', home: true, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium' },
+    { id: 1, opponent: isArabic ? 'الأهلي طرابلس' : 'Al Ahli Tripoli', date: '2023-10-15', time: '19:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', },
+    { id: 2, opponent: isArabic ? 'التحدي' : 'Al Tahaddi', date: '2023-10-22', time: '16:00', home: false, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب بنغازي' : 'Benghazi Stadium', },
+    { id: 3, opponent: isArabic ? 'النصر بنغازي' : 'Al Nasr Benghazi', date: '2023-10-29', time: '18:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', },
+    { id: 4, opponent: isArabic ? 'الاتحاد' : 'Al Ittihad', date: '2023-11-05', time: '20:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب طرابلس' : 'Tripoli Stadium', },
+    { id: 5, opponent: isArabic ? 'الشط' : 'Al Shat', date: '2023-11-12', time: '17:00', home: true, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', },
   ];
 
   const completedMatches = [
-    { id: 1, opponent: isArabic ? 'الأهلي بنغازي' : 'Al Ahli Benghazi', date: '2023-09-10', time: '19:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '3-1', scorers: [isArabic ? 'محمد خليفة 15' : 'Mohammed Khalifa 15', isArabic ? 'يوسف إبراهيم 32' : 'Yousef Ibrahim 32', isArabic ? 'طارق السيد 78' : 'Tarek Al-Sayed 78'] },
-    { id: 2, opponent: isArabic ? 'التحدي' : 'Al Tahaddi', date: '2023-09-17', time: '16:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب مصراتة' : 'Misrata Stadium', result: 'D', score: '2-2', scorers: [isArabic ? 'أحمد رامي 25' : 'Ahmed Rami 25', isArabic ? 'خالد سالم 67' : 'Khaled Salem 67'] },
-    { id: 3, opponent: isArabic ? 'النصر بنغازي' : 'Al Nasr Benghazi', date: '2023-09-24', time: '18:00', home: true, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '2-0', scorers: [isArabic ? 'ياسر أحمد 40' : 'Yasser Ahmed 40', isArabic ? 'حسن علي 85' : 'Hassan Ali 85'] },
-    { id: 4, opponent: isArabic ? 'الاتحاد' : 'Al Ittihad', date: '2023-10-01', time: '20:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب طرابلس' : 'Tripoli Stadium', result: 'L', score: '1-2', scorers: [isArabic ? 'محمود عمر 55' : 'Mahmoud Omar 55'] },
-    { id: 5, opponent: isArabic ? 'الشط' : 'Al Shat', date: '2023-10-08', time: '17:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '4-2', scorers: [isArabic ? 'طارق السيد 12' : 'Tarek Al-Sayed 12', isArabic ? 'يوسف إبراهيم 34' : 'Yousef Ibrahim 34', isArabic ? 'أحمد رامي 58' : 'Ahmed Rami 58', isArabic ? 'خالد محمود 72' : 'Khaled Mahmoud 72'] },
-    { id: 6, opponent: isArabic ? 'السويحلي' : 'Al Suwaihli', date: '2023-09-03', time: '19:00', home: false, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب مصراتة' : 'Misrata Stadium', result: 'W', score: '3-1', scorers: [isArabic ? 'علي عبدالله 20' : 'Ali Abdullah 20', isArabic ? 'مصطفى حسن 45' : 'Mustafa Hassan 45', isArabic ? 'حمزة عادل 89' : 'Hamza Adel 89'] },
-    { id: 7, opponent: isArabic ? 'الأولمبي' : 'Al Olympi', date: '2023-08-27', time: '16:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'D', score: '1-1', scorers: [isArabic ? 'عبدالرحمن علي 60' : 'Abdelrahman Ali 60'] },
-    { id: 8, opponent: isArabic ? 'الدرع' : 'Al Diraa', date: '2023-08-20', time: '18:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الزاوية' : 'Zawiya Stadium', result: 'W', score: '2-0', scorers: [isArabic ? 'ياسر أحمد 30' : 'Yasser Ahmed 30', isArabic ? 'حسن علي 75' : 'Hassan Ali 75'] },
+    { id: 1, opponent: isArabic ? 'الأهلي بنغازي' : 'Al Ahli Benghazi', date: '2023-09-10', time: '19:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '3-1', scorers: [isArabic ? 'محمد خليفة 15' : 'Mohammed Khalifa 15', isArabic ? 'يوسف إبراهيم 32' : 'Yousef Ibrahim 32', isArabic ? 'طارق السيد 78' : 'Tarek Al-Sayed 78', ], },
+    { id: 2, opponent: isArabic ? 'التحدي' : 'Al Tahaddi', date: '2023-09-17', time: '16:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب مصراتة' : 'Misrata Stadium', result: 'D', score: '2-2', scorers: [isArabic ? 'أحمد رامي 25' : 'Ahmed Rami 25', isArabic ? 'خالد سالم 67' : 'Khaled Salem 67', ], },
+    { id: 3, opponent: isArabic ? 'النصر بنغازي' : 'Al Nasr Benghazi', date: '2023-09-24', time: '18:00', home: true, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '2-0', scorers: [isArabic ? 'ياسر أحمد 40' : 'Yasser Ahmed 40', isArabic ? 'حسن علي 85' : 'Hassan Ali 85', ], },
+    { id: 4, opponent: isArabic ? 'الاتحاد' : 'Al Ittihad', date: '2023-10-01', time: '20:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب طرابلس' : 'Tripoli Stadium', result: 'L', score: '1-2', scorers: [isArabic ? 'محمود عمر 55' : 'Mahmoud Omar 55', ], },
+    { id: 5, opponent: isArabic ? 'الشط' : 'Al Shat', date: '2023-10-08', time: '17:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'W', score: '4-2', scorers: [isArabic ? 'طارق السيد 12' : 'Tarek Al-Sayed 12', isArabic ? 'يوسف إبراهيم 34' : 'Yousef Ibrahim 34', isArabic ? 'أحمد رامي 58' : 'Ahmed Rami 58', isArabic ? 'خالد محمود 72' : 'Khaled Mahmoud 72', ], },
+    { id: 6, opponent: isArabic ? 'السويحلي' : 'Al Suwaihli', date: '2023-09-03', time: '19:00', home: false, league: isArabic ? 'كأس ليبيا' : 'Libyan Cup', venue: isArabic ? 'ملعب مصراتة' : 'Misrata Stadium', result: 'W', score: '3-1', scorers: [isArabic ? 'علي عبدالله 20' : 'Ali Abdullah 20', isArabic ? 'مصطفى حسن 45' : 'Mustafa Hassan 45', isArabic ? 'حمزة عادل 89' : 'Hamza Adel 89', ], },
+    { id: 7, opponent: isArabic ? 'الأولمبي' : 'Al Olympi', date: '2023-08-27', time: '16:00', home: true, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الظهرة' : 'Aldahara Stadium', result: 'D', score: '1-1', scorers: [isArabic ? 'عبدالرحمن علي 60' : 'Abdelrahman Ali 60', ], },
+    { id: 8, opponent: isArabic ? 'الدرع' : 'Al Diraa', date: '2023-08-20', time: '18:00', home: false, league: isArabic ? 'الدوري الليبي' : 'Libyan Premier League', venue: isArabic ? 'ملعب الزاوية' : 'Zawiya Stadium', result: 'W', score: '2-0', scorers: [isArabic ? 'ياسر أحمد 30' : 'Yasser Ahmed 30', isArabic ? 'حسن علي 75' : 'Hassan Ali 75', ], },
   ];
 
   // Calculate how many players to show based on screen size
@@ -122,40 +122,40 @@ const FootballSection = ({ isArabic }) => {
     enter: (direction) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
-      scale: 0.8
-    }),
+      scale: 0.8,
+    }), // --- FIX: Added comma here ---
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
-      scale: 1
-    },
+      scale: 1,
+    }, // --- FIX: Added comma here ---
     exit: (direction) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
-      scale: 0.8
-    })
+      scale: 0.8,
+    }), // --- FIX: Added comma here ---
   };
 
   const matchVariants = {
     enter: (direction) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
-      scale: 0.9
-    }),
+      scale: 0.9,
+    }), // --- FIX: Added comma here ---
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
-      scale: 1
-    },
+      scale: 1,
+    }, // --- FIX: Added comma here ---
     exit: (direction) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
-      scale: 0.9
-    })
+      scale: 0.9,
+    }), // --- FIX: Added comma here ---
   };
 
   const getResultColor = (result) => {
@@ -308,11 +308,16 @@ const FootballSection = ({ isArabic }) => {
                       >
                         {/* Enhanced Player Card */}
                         <div className="relative h-full overflow-hidden transition-all duration-500 transform border-4 border-gray-800 shadow-2xl rounded-xl group-hover:scale-105 group-hover:border-red-600">
+                          {/* --- CHANGE 1: Enhanced Image Component --- */}
                           <Image
                             src={player.image}
-                            alt={player.name}
+                            alt={`${isArabic ? 'صورة للاعب' : 'Portrait of'} ${player.name}, ${isArabic ? player.position : player.position + ' for Aldahara SC'}`}
                             layout="fill"
                             objectFit="cover"
+                            quality={85}
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                             className="transition-transform duration-700 group-hover:scale-110"
                           />
                           
@@ -676,13 +681,15 @@ const FootballSection = ({ isArabic }) => {
             <p className={`mb-8 text-lg text-gray-300 ${isArabic ? 'font-arabic' : ''}`}>
               {isArabic ? 'انضم إلينا في الملعب لدعم فريقك' : 'Join us at the stadium to support your team'}
             </p>
-            <motion.button
+            {/* --- CHANGE 2: Button changed to semantic Link --- */}
+            <motion.a
+              href="#" // You can replace "#" with your actual ticket page link later
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 font-bold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 hover:shadow-xl hover:scale-105"
+              className="inline-block px-10 py-4 font-bold text-center text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 hover:shadow-xl hover:scale-105"
             >
               {isArabic ? 'اشتر الآن' : 'Buy Now'}
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

@@ -7,13 +7,14 @@ const Hero = ({ isArabic }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/football-stadium.jpg"
-          alt="Football Stadium"
+          src="/football.jpg"
+          alt="Aldahara Sports Club Team" // Updated alt text for accuracy
           layout="fill"
           objectFit="cover"
           quality={100}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        {/* --- CHANGE: Overlay lightened from 60% to 50% for a brighter feel --- */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
 
       {/* Hero Content */}
@@ -23,16 +24,8 @@ const Hero = ({ isArabic }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex justify-center mb-6">
-            <div className="relative w-24 h-24 md:w-32 md:h-32">
-              <Image
-                src="/logo6.png"
-                alt="Club Logo"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-          </div>
+          {/* --- REMOVED: The center logo has been removed for a cleaner look --- */}
+          
           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 ${isArabic ? 'font-arabic-heading' : ''}`}>
             {isArabic ? 'نادي الظهرة الرياضي' : 'Aldahara Sports Club'}
           </h1>
