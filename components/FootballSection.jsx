@@ -1,8 +1,15 @@
+// components/FootballSection.jsx
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+// --- CHANGE 1: Import the useLanguage hook ---
+import { useLanguage } from '../contexts/LanguageContext';
 
-const FootballSection = ({ isArabic }) => {
+// --- CHANGE 2: Remove 'isArabic' from the props ---
+const FootballSection = () => {
+  // --- CHANGE 3: Get 'isArabic' from the global hook ---
+  const { isArabic } = useLanguage();
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [hoveredPlayer, setHoveredPlayer] = useState(null);
   const [direction, setDirection] = useState(0);

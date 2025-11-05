@@ -1,7 +1,11 @@
+// pages/index.js
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
+
+// --- CHANGE 1: Import the useLanguage hook ---
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Components
 import Header from '../components/Header';
@@ -14,7 +18,8 @@ import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  const [isArabic, setIsArabic] = useState(false);
+  // --- CHANGE 2: Use the global language hook and remove local state ---
+  const { isArabic } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,11 +35,8 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLanguage = () => {
-    setIsArabic(!isArabic);
-  };
-
   return (
+    // --- CHANGE 3: This div now correctly uses the global isArabic state ---
     <div className={`min-h-screen bg-white ${isArabic ? 'rtl' : 'ltr'}`} dir={isArabic ? 'rtl' : 'ltr'}>
       <Head>
         <title>{isArabic ? 'نادي الظهرة الرياضي' : 'Aldahara Sports Club'}</title>
@@ -42,14 +44,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header isArabic={isArabic} toggleLanguage={toggleLanguage} isScrolled={isScrolled} />
-      <Hero isArabic={isArabic} />
-      <FootballSection isArabic={isArabic} />
-      <BasketballSection isArabic={isArabic} />
-      <YouthSection isArabic={isArabic} />
-      <FanClubSection isArabic={isArabic} />
-      <ContactSection isArabic={isArabic} />
-      <Footer isArabic={isArabic} />
+      {/* --- CHANGE 4: Remove isArabic and toggleLanguage from all components --- */}
+      <Header isScrolled={isScrolled} />
+      <Hero />
+      <FootballSection />
+      <BasketballSection />
+      <YouthSection />
+      <FanClubSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }

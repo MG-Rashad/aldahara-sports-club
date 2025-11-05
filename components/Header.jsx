@@ -1,8 +1,14 @@
+// components/Header.jsx
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+// --- CHANGE 1: Import the useLanguage hook ---
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Header = ({ isArabic, toggleLanguage, isScrolled }) => {
+const Header = ({ isScrolled }) => {
+  // --- CHANGE 2: Remove local state and use the global hook instead ---
+  const { isArabic, toggleLanguage } = useLanguage();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -90,7 +96,7 @@ const Header = ({ isArabic, toggleLanguage, isScrolled }) => {
 
           {/* --- CHANGE: Removed 'space-x-4' from the parent div to control spacing manually --- */}
           <div className="flex items-center">
-            {/* --- START: FIX FOR RTL SPACING --- */}
+            {/* --- START: FINAL SOCIAL MEDIA ICONS (GRAY BG) --- */}
             <div className={`hidden lg:flex items-center ${isArabic ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
               <motion.a
                 href="https://facebook.com"
@@ -129,7 +135,7 @@ const Header = ({ isArabic, toggleLanguage, isScrolled }) => {
                 </svg>
               </motion.a>
             </div>
-            {/* --- END: FIX FOR RTL SPACING --- */}
+            {/* --- END: FINAL SOCIAL MEDIA ICONS --- */}
 
             {/* --- CHANGE: Added a specific margin to the language button for more space --- */}
             <button

@@ -1,19 +1,25 @@
+// components/Hero.jsx
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+// --- CHANGE 1: Import the useLanguage hook ---
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Hero = ({ isArabic }) => {
+// --- CHANGE 2: Remove 'isArabic' from the props ---
+const Hero = () => {
+  // --- CHANGE 3: Get 'isArabic' from the global hook ---
+  const { isArabic } = useLanguage();
+
   return (
     <section id="home" className="relative h-screen max-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/football.jpg"
-          alt="Aldahara Sports Club Team" // Updated alt text for accuracy
+          alt="Aldahara Sports Club Team"
           layout="fill"
           objectFit="cover"
           quality={100}
         />
-        {/* --- CHANGE: Overlay lightened from 60% to 50% for a brighter feel --- */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
 
@@ -24,8 +30,6 @@ const Hero = ({ isArabic }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* --- REMOVED: The center logo has been removed for a cleaner look --- */}
-          
           <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 ${isArabic ? 'font-arabic-heading' : ''}`}>
             {isArabic ? 'نادي الظهرة الرياضي' : 'Aldahara Sports Club'}
           </h1>

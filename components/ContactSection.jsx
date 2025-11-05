@@ -1,7 +1,14 @@
+// components/ContactSection.jsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+// --- CHANGE 1: Import the useLanguage hook ---
+import { useLanguage } from '../contexts/LanguageContext';
 
-const ContactSection = ({ isArabic }) => {
+// --- CHANGE 2: Remove 'isArabic' from the props ---
+const ContactSection = () => {
+  // --- CHANGE 3: Get 'isArabic' from the global hook ---
+  const { isArabic } = useLanguage();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
