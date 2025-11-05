@@ -81,24 +81,24 @@ body {
 
 
 /* ========================================
-  PROFESSIONAL FIX FOR MOBILE SPACING
+  AGGRESSIVE FIX FOR MOBILE SPACING
   ========================================
-  Problem: On mobile, content was not perfectly mirrored between LTR and RTL.
-  Cause: Hardcoded directional padding (e.g., pl-4, pr-4) in components does not
-  automatically respect the 'dir' attribute on the HTML element.
-  Solution: Use logical properties (padding-inline-start/end) which
-  automatically adapt to the text direction. This is a modern, robust
-  CSS feature and the professional way to handle this.
+  Problem: Content is not perfectly mirrored between LTR and RTL on mobile.
+  Cause: Specific component classes (e.g., px-4) are overriding our global styles.
+  Solution: Use a more specific CSS selector and !important to force the correct
+  logical padding and margin on all main content containers.
 */
-section {
-  padding-inline-start: 1.5rem; /* Replaces pl-6 / pr-6 on mobile */
-  padding-inline-end: 1.5rem;  /* Replaces pr-6 / pl-6 on mobile */
+section > div > div {
+  padding-inline-start: 1.5rem !important; /* Force override pl-6 / pr-6 */
+  padding-inline-end: 1.5rem !important;  /* Force override pr-6 / pl-6 */
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 /* For slightly larger screens, increase padding slightly */
 @media (min-width: 640px) {
-  section {
-    padding-inline-start: 2rem; /* Replaces pl-8 / pr-8 on desktop */
-    padding-inline-end: 2rem;  /* Replaces pr-8 / pl-8 on desktop */
+  section > div > div {
+    padding-inline-start: 2rem !important; /* Force override pl-8 / pr-8 */
+    padding-inline-end: 2rem !important;  /* Force override pr-8 / pl-8 */
   }
 }
