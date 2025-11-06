@@ -12,8 +12,9 @@ html {
 }
 
 body {
-  /* Use the font-sans utility, which will now correctly apply 'Inter' or 'Cairo' */
   font-family: theme('fontFamily.sans');
+  margin: 0; /* FIX: Removes default browser margin */
+  padding: 0; /* FIX: For good measure */
 }
 
 /* Custom scrollbar - this is fine to keep */
@@ -34,13 +35,15 @@ body {
 }
 
 /* ========================================
-  ALL MANUAL RTL FIXES ARE NOW DELETED
+  SCROLL-SNAP CAROUSEL FIX
   ========================================
-  We removed:
-  - .font-arabic classes
-  - [dir="rtl"] selectors
-  - The "AGGRESSIVE FIX FOR MOBILE SPACING"
-
-  RTL behavior is now handled automatically by Tailwind's RTL plugin.
-  Font styles should be applied directly in components using Tailwind classes.
+  This ensures our carousels work on all devices.
 */
+.scroll-snap-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+}
+
+.scroll-snap-item {
+  scroll-snap-align: start;
+}

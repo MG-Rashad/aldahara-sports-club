@@ -50,10 +50,8 @@ const FootballSection = () => {
   ];
 
   // --- SCROLL CONTROL FUNCTIONS ---
-  // These functions replace the complex slide state management.
   const scrollCarousel = (ref, direction) => {
     if (!ref.current) return;
-    // We calculate the scroll amount based on the width of a card + the gap
     const scrollAmount = ref.current.firstElementChild.offsetWidth + 24; // 24px = gap-6
     ref.current.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
@@ -140,14 +138,14 @@ const FootballSection = () => {
             {/* NEW: The CSS Scroll-Snap Carousel Container */}
             <div
               ref={playersCarouselRef}
-              className="flex gap-6 pb-4 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory"
+              className="flex gap-6 pb-4 overflow-x-auto scroll-smooth scroll-snap-container"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} // Hide scrollbar for cleaner look
             >
               {teamMembers.map((player, index) => (
                 <motion.div
                   key={player.id}
                   // NEW: Scroll-snap class for the child item
-                  className="flex-none w-80 scroll-snap-align-start"
+                  className="flex-none w-80 scroll-snap-item"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, root: playersCarouselRef.current }}
@@ -244,13 +242,13 @@ const FootballSection = () => {
             {/* NEW: Matches Scroll-Snap Carousel */}
             <div
               ref={matchesCarouselRef}
-              className="flex gap-6 pb-4 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory"
+              className="flex gap-6 pb-4 overflow-x-auto scroll-smooth scroll-snap-container"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} // Hide scrollbar
             >
               {(activeMatchTab === 'upcoming' ? upcomingMatches : completedMatches).map((match, index) => (
                 <motion.div
                   key={`${match.id}-${activeMatchTab}`}
-                  className="flex-none w-96 scroll-snap-align-start"
+                  className="flex-none w-96 scroll-snap-item"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, root: matchesCarouselRef.current }}

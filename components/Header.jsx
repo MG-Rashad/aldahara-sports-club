@@ -159,10 +159,11 @@ const Header = ({ isScrolled }) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="bg-black bg-opacity-95 lg:hidden"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            // FIX: Added z-index and positioning to make it a full-screen overlay
+            className="fixed inset-0 z-50 flex flex-col justify-end bg-black bg-opacity-95 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <div className="container px-4 py-4 mx-auto">
