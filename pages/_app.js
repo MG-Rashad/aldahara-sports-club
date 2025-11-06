@@ -1,11 +1,12 @@
 // pages/_app.js
 import '../styles/globals.css';
-import { useEffect } from 'react';
+import { LanguageProvider } from '../contexts/LanguageContext';
 import Head from 'next/head';
-// --- FIX IS HERE: Import both LanguageProvider AND useLanguage ---
-import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import { useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-function MyApp({ Component, pageProps }) {
+// This component consumes the context
+function AppContent({ Component, pageProps }) {
   const { dir } = useLanguage();
 
   // Set the dir attribute on the html element
@@ -18,8 +19,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         {/* Set the lang attribute on the html tag for accessibility and SEO */}
         <html lang={dir === 'rtl' ? 'ar' : 'en'} />
-        <title>Football Club</title>
-        <meta name="description" content="Official website for our football club" />
+        <title>Aldahara Sports Club</title>
+        <meta name="description" content="Official website for Aldahara Sports Club" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />
@@ -27,11 +28,11 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-// Wrap the app with the provider
-export default function AppWithProvider(props) {
+// This component provides the context to the rest of the app
+export default function MyApp({ Component, pageProps }) {
   return (
     <LanguageProvider>
-      <MyApp {...props} />
+      <AppContent Component={Component} pageProps={pageProps} />
     </LanguageProvider>
   );
 }
