@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -11,9 +13,14 @@ module.exports = {
         'club-white': '#ffffff',
       },
       fontFamily: {
-        'arabic': ['Cairo', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        arabic: ['Cairo', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Make sure this line is exactly 'tailwindcss-rtl'
+    require('tailwindcss-rtl'),
+  ],
+  rtl: true,
 }

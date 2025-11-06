@@ -2,12 +2,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-// --- CHANGE 1: Import the useLanguage hook ---
 import { useLanguage } from '../contexts/LanguageContext';
 
-// --- CHANGE 2: Remove 'isArabic' from the props ---
 const FanClubSection = () => {
-  // --- CHANGE 3: Get 'isArabic' from the global hook ---
   const { isArabic } = useLanguage();
 
   const [email, setEmail] = useState('');
@@ -29,7 +26,8 @@ const FanClubSection = () => {
 
   return (
     <section id="fanclub" className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+      {/* CHANGE: Added responsive padding to the container */}
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

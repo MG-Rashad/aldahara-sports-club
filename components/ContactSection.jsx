@@ -1,12 +1,9 @@
 // components/ContactSection.jsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-// --- CHANGE 1: Import the useLanguage hook ---
 import { useLanguage } from '../contexts/LanguageContext';
 
-// --- CHANGE 2: Remove 'isArabic' from the props ---
 const ContactSection = () => {
-  // --- CHANGE 3: Get 'isArabic' from the global hook ---
   const { isArabic } = useLanguage();
 
   const [formData, setFormData] = useState({
@@ -62,7 +59,8 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+      {/* CHANGE 1: Added responsive padding to the container */}
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -186,7 +184,8 @@ const ContactSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-start space-x-4"
+                    // CHANGE 2: Added space-x-reverse for RTL spacing
+                    className={`flex items-start ${isArabic ? 'space-x-reverse space-x-4' : 'space-x-4'}`}
                   >
                     <div className="text-2xl">{info.icon}</div>
                     <div>

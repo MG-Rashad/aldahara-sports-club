@@ -1,12 +1,9 @@
 // components/BasketballSection.jsx
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-// --- CHANGE 1: Import the useLanguage hook ---
 import { useLanguage } from '../contexts/LanguageContext';
 
-// --- CHANGE 2: Remove 'isArabic' from the props ---
 const BasketballSection = () => {
-  // --- CHANGE 3: Get 'isArabic' from the global hook ---
   const { isArabic } = useLanguage();
 
   const achievements = [
@@ -24,7 +21,8 @@ const BasketballSection = () => {
 
   return (
     <section id="basketball" className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+      {/* CHANGE 1: Added responsive padding to the container */}
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +76,8 @@ const BasketballSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center p-4 space-x-4 bg-gray-100 rounded-lg"
+                  // CHANGE 2: Added space-x-reverse for RTL spacing
+                  className={`flex items-center p-4 ${isArabic ? 'space-x-reverse space-x-4' : 'space-x-4'} bg-gray-100 rounded-lg`}
                 >
                   <div className="text-3xl">{achievement.icon}</div>
                   <p className={`font-medium text-black ${isArabic ? 'font-arabic' : ''}`}>{achievement.title}</p>
@@ -89,7 +88,8 @@ const BasketballSection = () => {
             <h3 className={`text-2xl font-bold text-black mb-6 ${isArabic ? 'font-arabic' : ''}`}>
               {isArabic ? 'لاعبو الفريق' : 'Key Players'}
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            {/* CHANGE 3: Improved grid responsiveness for mobile */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {players.map((player, index) => (
                 <motion.div
                   key={player.id}
@@ -99,7 +99,8 @@ const BasketballSection = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="p-4 text-white bg-red-600 rounded-lg"
                 >
-                  <div className="flex items-center space-x-3">
+                  {/* CHANGE 4: Added space-x-reverse for RTL spacing */}
+                  <div className={`flex items-center ${isArabic ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                     <div className="text-3xl font-bold">#{player.number}</div>
                     <div>
                       <h4 className={`font-bold ${isArabic ? 'font-arabic' : ''}`}>{player.name}</h4>

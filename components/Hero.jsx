@@ -7,7 +7,7 @@ const Hero = () => {
   const { isArabic } = useLanguage();
 
   return (
-    <section id="home" className="relative h-screen max-h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative flex items-center justify-center overflow-hidden h-screen max-h-[700px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -16,21 +16,22 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
+          priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl px-4 mx-auto text-center">
+      <div className="relative z-10 max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 ${isArabic ? 'font-arabic-heading' : ''}`}>
+          <h1 className={`text-4xl font-bold text-white mb-4 md:text-5xl lg:text-6xl ${isArabic ? 'font-arabic' : ''}`}>
             {isArabic ? 'نادي الظهرة الرياضي' : 'Aldahara Sports Club'}
           </h1>
-          <p className={`text-lg md:text-xl text-white mb-6 ${isArabic ? 'font-arabic' : ''}`}>
+          <p className={`text-lg text-white mb-6 md:text-xl ${isArabic ? 'font-arabic' : ''}`}>
             {isArabic ? 'شرف، فخر، تاريخ' : 'Honor, Pride, History'}
           </p>
           <motion.button
@@ -46,7 +47,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute text-white transform -translate-x-1/2 bottom-8 left-1/2"
+        className="absolute text-white transform -translate-x-1/2 bottom-8 start-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
@@ -55,19 +56,8 @@ const Hero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </motion.div>
       </motion.div>
