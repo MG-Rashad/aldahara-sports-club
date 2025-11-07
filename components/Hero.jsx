@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/football.jpg"
+          src="/fans-celebrating.jpg"
           alt="Aldahara Sports Club Team"
           layout="fill"
           objectFit="cover"
